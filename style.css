@@ -1,63 +1,147 @@
-td{
-    border:2px solid black;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #1e1e1e; /* Dark background for contrast */
+    padding: 20px;
+    border-bottom: 2px solid #61dafb; /* Light blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding subtle shadow for depth */
+    width: 100%;
+    position: absolute; /* Keep it positioned at the top */
+    top: 0; /* Fix the header at the top of the page */
+    left: 0; /* Align it to the left */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 100px; /* Create space for the fixed header */
+}
+
+header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #61dafb; /* Light blue color */
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    letter-spacing: 2px;
+    text-transform: uppercase; /* All caps for a bold look */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Light gray color for text */
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px; /* Limiting width for better readability */
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+header p br {
+    margin-bottom: 5px; /* Adding space between lines */
+}
+
+
+/* Table (Board) Styling */
+table {
+    border-collapse: collapse;
+    margin: 20px auto; /* Added margin to create space between the grid and other elements */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+}
+
+td {
+    border: 4px solid #61dafb; /* Light blue border to match theme */
     height: 100px;
     width: 100px;
     text-align: center;
     vertical-align: middle;
-    font-family: "Comic Sana MS",cursive,sans-serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 70px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
 }
-table{
-    border-collapse: collapse;
-    position: absolute;
-    left: 50%;
-    margin-left: -155px;
-    top: 25%;
+
+/* Hover effect for cells */
+td:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
 }
-table tr:first-child td{
-    border-top: 0;
+
+table tr:first-child td {
+    border-top: none;
 }
-table tr:last-child td{
-    border-bottom: 0;
+table tr:last-child td {
+    border-bottom: none;
 }
-table tr td:first-child{
-    border-left: 0;
+table tr td:first-child {
+    border-left: none;
 }
-table tr td:last-child{
-    border-right: 0;
+table tr td:last-child {
+    border-right: none;
 }
-.endgame{
+
+/* Endgame Message Styling */
+.endgame {
     display: none;
-    width: 180px;
+    width: 250px;
     top: 40%;
-    background-color: rgba(238, 199, 159, 0.8);
+    background-color: rgba(34, 34, 34, 0.8); /* Dark semi-transparent background */
     position: absolute;
     left: 50%;
-    margin-left: -120px;
+    margin-left: -125px;
     text-align: center;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    border-radius: 5px;
-    color: aliceblue;
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
     font-size: 2rem;
-   
-}
-button{
-    position: absolute;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    background-color: blueviolet;
-    height: 4vh;
-    width: auto;
-    left:48%;
-    top: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding some shadow */
 }
 
 .endgame .text {
     font-size: 24px;
-    font-weight: bold; 
+    font-weight: bold;
+    color: #61dafb; /* Same light blue for consistency */
+    text-transform: uppercase;
+}
+
+/* Button Styling */
+button {
+    margin-top: 60px; /* Added margin to create space between the button and the grid */
+    padding: 10px 30px;
+    background-color: #61dafb; /* Matching blue color */
+    border: none;
+    border-radius: 5px;
     color: white;
-    text-transform: uppercase; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+}
+
+/* Button Positioning */
+button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 85%; /* Adjusted button position for better spacing */
 }
