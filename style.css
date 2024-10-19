@@ -1,25 +1,21 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
-/* Header Styling */
 header {
     text-align: center;
-    background-color: #1e1e1e; /* Dark background for contrast */
+    background-color: #1e1e1e;
     padding: 20px;
-    border-bottom: 2px solid #61dafb; /* Light blue border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding subtle shadow for depth */
+    border-bottom: 2px solid #61dafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    position: absolute; /* Keep it positioned at the top */
-    top: 0; /* Fix the header at the top of the page */
-    left: 0; /* Align it to the left */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #282c34;
@@ -30,43 +26,41 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    padding-top: 100px; /* Create space for the fixed header */
+    padding-top: 100px;
 }
 
 header h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #61dafb; /* Light blue color */
+    color: #61dafb;
     margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 2px;
-    text-transform: uppercase; /* All caps for a bold look */
+    text-transform: uppercase;
 }
 
 header p {
     font-size: 1.2rem;
-    color: #f0f0f0; /* Light gray color for text */
+    color: #f0f0f0;
     line-height: 1.8;
     font-family: 'Poppins', sans-serif;
-    max-width: 600px; /* Limiting width for better readability */
+    max-width: 600px;
     margin: 0 auto;
     letter-spacing: 1px;
 }
 
 header p br {
-    margin-bottom: 5px; /* Adding space between lines */
+    margin-bottom: 5px;
 }
 
-
-/* Table (Board) Styling */
 table {
     border-collapse: collapse;
-    margin: 20px auto; /* Added margin to create space between the grid and other elements */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+    margin: 20px auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 td {
-    border: 4px solid #61dafb; /* Light blue border to match theme */
+    border: 4px solid #61dafb;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -74,12 +68,11 @@ td {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 70px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover transition */
+    transition: background-color 0.3s ease;
 }
 
-/* Hover effect for cells */
 td:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 table tr:first-child td {
@@ -95,12 +88,11 @@ table tr td:last-child {
     border-right: none;
 }
 
-/* Endgame Message Styling */
 .endgame {
     display: none;
     width: 250px;
     top: 40%;
-    background-color: rgba(34, 34, 34, 0.8); /* Dark semi-transparent background */
+    background-color: rgba(34, 34, 34, 0.8);
     position: absolute;
     left: 50%;
     margin-left: -125px;
@@ -109,21 +101,20 @@ table tr td:last-child {
     border-radius: 10px;
     color: white;
     font-size: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding some shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .endgame .text {
     font-size: 24px;
     font-weight: bold;
-    color: #61dafb; /* Same light blue for consistency */
+    color: #61dafb;
     text-transform: uppercase;
 }
 
-/* Button Styling */
 button {
-    margin-top: 60px; /* Added margin to create space between the button and the grid */
+    margin-top: 60px;
     padding: 10px 30px;
-    background-color: #61dafb; /* Matching blue color */
+    background-color: #61dafb;
     border: none;
     border-radius: 5px;
     color: white;
@@ -133,15 +124,13 @@ button {
     transition: background-color 0.3s ease;
 }
 
-/* Button Hover Effect */
 button:hover {
-    background-color: #21a1f1; /* Darker blue on hover */
+    background-color: #21a1f1;
 }
 
-/* Button Positioning */
 button {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 85%; /* Adjusted button position for better spacing */
+    top: 85%;
 }
