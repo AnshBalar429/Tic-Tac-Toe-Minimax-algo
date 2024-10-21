@@ -1,61 +1,83 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-bottom: 2px solid #61dafb;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #282c34;
     color: white;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+/* Navigation Bar Styling */
+nav {
+    width: 100%;
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    border-bottom: 2px solid #61dafb;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Align items horizontally */
+    align-items: center;
     margin: 0;
-    padding-top: 100px;
+    padding: 0;
 }
 
-header h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
+nav ul li {
+    margin: 0 15px; /* Space between names horizontally */
+}
+
+nav h1 {
+    font-size: 1.5rem;
     color: #61dafb;
-    margin-bottom: 15px;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    margin: 0 20px; /* Space between the title and first name */
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #f0f0f0;
-    line-height: 1.8;
-    font-family: 'Poppins', sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    letter-spacing: 1px;
+nav ul li a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-header p br {
-    margin-bottom: 5px;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Container for game and AI prediction */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-top: 70px; /* Extra margin after the nav */
+}
+
+/* Game section styles */
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 table {
     border-collapse: collapse;
-    margin: 20px auto;
+    margin-bottom: 20px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -66,42 +88,54 @@ td {
     text-align: center;
     vertical-align: middle;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-td:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+/* AI prediction section styles */
+.ai-prediction-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
 }
 
-table tr:first-child td {
-    border-top: none;
-}
-table tr:last-child td {
-    border-bottom: none;
-}
-table tr td:first-child {
-    border-left: none;
-}
-table tr td:last-child {
-    border-right: none;
+#aiPredictionDisplay {
+    width: 100%;
 }
 
+.board-state {
+    display: inline-block;
+    margin: 10px;
+}
+
+.board-state table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.board-state td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* Endgame Modal */
 .endgame {
     display: none;
     width: 250px;
-    top: 40%;
     background-color: rgba(34, 34, 34, 0.8);
     position: absolute;
-    left: 50%;
-    margin-left: -125px;
     text-align: center;
     padding: 50px;
     border-radius: 10px;
     color: white;
     font-size: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .endgame .text {
@@ -112,7 +146,6 @@ table tr td:last-child {
 }
 
 button {
-    margin-top: 60px;
     padding: 10px 30px;
     background-color: #61dafb;
     border: none;
@@ -121,16 +154,8 @@ button {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #21a1f1;
-}
-
-button {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 85%;
 }

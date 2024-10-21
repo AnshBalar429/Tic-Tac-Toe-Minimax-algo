@@ -4,45 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tic tac Toe</title>
+    <title>Tic Tac Toe</title>
 </head>
 <body>
-    <header>
-        <h2>Team members</h2>
-        <p>
-            Harsh Boghani - ET22BTCO009
-            <br>
-            Ruhaan Dalal - ET22BTCO020
-            <br>
-            Niraj Donga - ET22BTCO031
-            <br>
-            Kishan Dudhat - ET22BTCO032
-            <br>
-            Anshkumar Balar - ET22BTCO007
-            <br>
-        </p>
-    </header>
-    <table>
-        <tr>
-            <td class="cell" id="0"></td>
-            <td class="cell" id="1"></td>
-            <td class="cell" id="2"></td>
-        </tr>
-        <tr>
-            <td class="cell" id="3"></td>
-            <td class="cell" id="4"></td>
-            <td class="cell" id="5"></td>
-        </tr>
-        <tr>
-            <td class="cell" id="6"></td>
-            <td class="cell" id="7"></td>
-            <td class="cell" id="8"></td>
-        </tr>
-    </table>
-    <div class="endgame">
-        <div class="text"></div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><h1>Team Members</h1></li>
+            <li><a href="#">Anshkumar Balar - ET22BTCO007</a></li>
+            <li><a href="#">Harsh Boghani - ET22BTCO009</a></li>
+            <li><a href="#">Ruhaan Dalal - ET22BTCO020</a></li>
+            <li><a href="#">Niraj Donga - ET22BTCO031</a></li>
+            <li><a href="#">Kishan Dudhat - ET22BTCO032</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Left side: Game Board -->
+        <div class="game-section">
+            <table>
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+            <div class="endgame">
+                <div class="text"></div>
+            </div>
+            <button onclick="startGame()">Restart</button>
+        </div>
+
+        <!-- Right side: AI Predicted Moves -->
+        <div class="ai-prediction-section">
+            <div id="aiPredictionDisplay"></div>
+        </div>
     </div>
-    <button onclick="startGame()">Replay</button>
+
     <script src="script.js"></script>
 </body>
 </html>
