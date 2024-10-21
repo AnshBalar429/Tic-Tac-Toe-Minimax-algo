@@ -12,46 +12,50 @@
     <nav>
         <ul>
             <li><h1>Team Members</h1></li>
-            <li><a href="#">Anshkumar Balar - ET22BTCO007</a></li>
-            <li><a href="#">Harsh Boghani - ET22BTCO009</a></li>
-            <li><a href="#">Ruhaan Dalal - ET22BTCO020</a></li>
-            <li><a href="#">Niraj Donga - ET22BTCO031</a></li>
-            <li><a href="#">Kishan Dudhat - ET22BTCO032</a></li>
+            <li><a href="#">Anshkumar Balar  ET22BTCO007</a></li>
+            <li><a href="#">Harsh Boghani  ET22BTCO009</a></li>
+            <li><a href="#">Ruhaan Dalal  ET22BTCO020</a></li>
+            <li><a href="#">Niraj Donga  ET22BTCO031</a></li>
+            <li><a href="#">Kishan Dudhat  ET22BTCO032</a></li>
         </ul>
     </nav>
 
     <!-- Main content container -->
-    <div class="container">
-        <!-- Left side: Game Board -->
-        <div class="game-section">
-            <table>
-                <tr>
-                    <td class="cell" id="0"></td>
-                    <td class="cell" id="1"></td>
-                    <td class="cell" id="2"></td>
-                </tr>
-                <tr>
-                    <td class="cell" id="3"></td>
-                    <td class="cell" id="4"></td>
-                    <td class="cell" id="5"></td>
-                </tr>
-                <tr>
-                    <td class="cell" id="6"></td>
-                    <td class="cell" id="7"></td>
-                    <td class="cell" id="8"></td>
-                </tr>
-            </table>
-            <div class="endgame">
-                <div class="text"></div>
-            </div>
-            <button onclick="startGame()">Restart</button>
+<div class="container">
+    <!-- Left side: Game Board -->
+    <div class="game-section">
+        <!-- Endgame status placed above the game grid -->
+        <div class="endgame">
+            <div class="text"></div>
         </div>
 
-        <!-- Right side: AI Predicted Moves -->
-        <div class="ai-prediction-section">
-            <div id="aiPredictionDisplay"></div>
-        </div>
+        <table>
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
+        </table>
+        
+        <button onclick="startGame()">Restart</button>
     </div>
+
+    <!-- Right side: AI Predicted Moves -->
+    <div class="ai-prediction-section">
+        <div id="aiPredictionDisplay"></div>
+    </div>
+</div>
+
 
     <script src="script.js"></script>
 </body>

@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
 /* Navigation Bar Styling */
@@ -24,37 +25,40 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 10px;
+    padding: 15px;
     border-bottom: 2px solid #61dafb;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
-    display: flex; /* Align items horizontally */
+    display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px; /* Space between names horizontally */
+    margin: 0 20px;
 }
 
 nav h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #61dafb;
-    margin: 0 20px; /* Space between the title and first name */
+    margin-right: 40px;
 }
 
 nav ul li a {
     color: #61dafb;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 nav ul li a:hover {
+    color: #21a1f1;
     text-decoration: underline;
 }
 
@@ -64,8 +68,8 @@ nav ul li a:hover {
     justify-content: space-between;
     width: 90%;
     margin: 20px auto;
-    margin-top: 20px;
-    margin-top: 70px; /* Extra margin after the nav */
+    margin-top: 90px;
+    padding-top: 50px;
 }
 
 /* Game section styles */
@@ -78,7 +82,7 @@ nav ul li a:hover {
 table {
     border-collapse: collapse;
     margin-bottom: 20px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow */
 }
 
 td {
@@ -90,6 +94,13 @@ td {
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 50px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Cell hover effects */
+td:hover {
+    background-color: rgba(97, 218, 251, 0.2); /* Subtle hover background */
+    transform: scale(1.1); /* Slight scaling effect */
 }
 
 /* AI prediction section styles */
@@ -126,16 +137,19 @@ td {
 }
 
 /* Endgame Modal */
+/* Endgame Modal - Move above the grid */
 .endgame {
     display: none;
     width: 250px;
     background-color: rgba(34, 34, 34, 0.8);
-    position: absolute;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     border-radius: 10px;
     color: white;
     font-size: 2rem;
+    margin-bottom: 20px; /* Add space between the status and the grid */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .endgame .text {
@@ -145,17 +159,36 @@ td {
     text-transform: uppercase;
 }
 
+/* Restart button styling */
 button {
-    padding: 10px 30px;
+    padding: 15px 40px;
     background-color: #61dafb;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
 button:hover {
     background-color: #21a1f1;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+button:active {
+    transform: scale(1); /* Scale back on click */
+    background-color: #1b7fcc; /* Darker color when clicked */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
